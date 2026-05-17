@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import os
 
-TOKEN = os.getenv("TOKEN") or "MTUwNTYzNDE0NjE5Njc4MzIxNA.GIJy5W.UudCgbreD7KwInTy2I0_clhu9J9MO9rkTXMv_Q"
+TOKEN = os.getenv("TOKEN")
 GUILD_ID = 1504190915235811360
 BOT_ZENTRALE = "bot-zentrale"
 

@@ -469,5 +469,22 @@ async def hilfe(interaction: discord.Interaction):
     )
     await interaction.response.send_message(embed=embed, ephemeral=True)
 
+@bot.tree.command(name="schreiben", description="Bot schreibt eine Nachricht in einen Channel")
+async def schreiben(
+    interaction: discord.Interaction,
+    channel: discord.TextChannel,
+    text: str
+):
+    if not interaction.user.guild_permissions.administrator:
+        return await interaction.response.send_message(
+            "❌ Keine Rechte.",
+            ephemeral=True
+        )
 
+    await channel.send(text)
+
+    await interaction.response.send_message(
+        f"✅ Nachricht wurde in {channel.mention} gesendet.",
+        ephemeral=True
+    )
 bot.run(TOKEN)

@@ -5,7 +5,7 @@ from discord.ext import commands
 from discord import app_commands
 
 TOKEN = os.getenv("TOKEN")
-OWNER_ID = DEINE_DISCORD_ID  # Hier deine Discord-ID eintragen
+OWNER_ID = 1407548826247761961  # Hier deine Discord-ID eintragen
 
 intents = discord.Intents.default()
 intents.members = True

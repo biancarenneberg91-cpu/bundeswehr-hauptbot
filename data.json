@@ -1,5 +1,7 @@
 {
     "warnings": {},
     "dienstgrade": {},
-    "dienstzeiten": {}
+    "dienstzeiten": {},
+    "einsaetze": 0,
+    "tickets": 0
 }

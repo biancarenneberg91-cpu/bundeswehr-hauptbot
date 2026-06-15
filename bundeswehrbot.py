@@ -45,7 +45,10 @@ class BundeswehrBot(commands.Bot):
     def __init__(self):
         super().__init__(
             command_prefix="!",
-            intents=intents
+            intents=intents 
+            from datetime import timedelta
+
+spam_tracker = {}
         )
 
     async def setup_hook(self):
@@ -504,3 +507,12 @@ async def alarm(interaction: discord.Interaction,
         content="@everyone",
         embed=embed
     )
+@bot.event
+async def on_member_join(member):
+
+    kanal = member.guild.system_channel
+
+    if kanal:
+        await kanal.send(
+            f"👋 Willkommen auf dem Server, {member.mention}!"
+        )
